@@ -131,14 +131,7 @@ button, input, label { font-family: inherit; }
 
 /* ---------- pinned summary + metrics ---------- */
 .pinned {
-  position: sticky;
-  top: 0;
-  z-index: 35;
-  background: var(--paper);
-  padding-top: 10px;
   margin-bottom: 20px;
-  border-bottom: 1px solid var(--line-strong);
-  box-shadow: 0 14px 26px -18px rgba(0, 0, 0, 0.65);
 }
 
 /* ---------- executive summary ---------- */
@@ -260,7 +253,7 @@ button, input, label { font-family: inherit; }
 
 .spine {
   position: sticky;
-  top: calc(var(--pinned-h, 250px) + 14px);
+  top: 20px;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -296,7 +289,7 @@ button, input, label { font-family: inherit; }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
-  scroll-margin-top: calc(var(--pinned-h, 250px) + 14px);
+  scroll-margin-top: 20px;
 }
 .panel-head {
   display: flex;
@@ -413,7 +406,6 @@ table.ledger {
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
-  .pinned { position: static; box-shadow: none; border-bottom: none; }
   .body-grid { grid-template-columns: 1fr; }
   .spine {
     position: static;
