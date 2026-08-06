@@ -8,26 +8,11 @@
 
   const EMBEDDED = {"months": ["2025-12-31", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30", "2026-07-31"], "closed": {"label": "Closed CARR", "items": [{"name": "July", "value": 276363.78}, {"name": "Q3 Plan", "value": 4670359.0}, {"name": "% of Plan", "value": 0.05917399069}]}, "sections": [{"title": "CARR", "metrics": [{"label": "Impressions", "note": null, "values": [23360383.0, 23517603.0, 23375593.0, 22112460.0, 22139510.0, 22205050.0, 22846288.0, 22936402.0], "plan": 28033734.0, "varr": -5097332, "isGroup": false}, {"label": "Reporting", "note": null, "values": [9338198.0, 9338198.0, 9479198.0, 10621073.0, 11630513.0, 11630513.0, 15339673.0, 15523273.0], "plan": 14379052.0, "varr": 1144221, "isGroup": false}, {"label": "Other", "note": null, "values": [3403760.0, 3403760.0, 3403760.0, 3578760.0, 3578760.0, 3578760.0, 3578760.0, 3578760.0], "plan": 4504167.0, "varr": -925407, "isGroup": false}, {"label": "Total CARR", "note": null, "values": [36102341, 36259561, 36258551, 36312293, 37348783, 37414323, 41764721, 42038435], "plan": 46916953, "varr": -4878518, "isGroup": false}, {"label": "YTD Growth (%)", "note": null, "values": [null, 0.004354842252, 0.004326866227, 0.005815467756, 0.03452524034, 0.03634063509, 0.1568424607, 0.1644240743], "plan": null, "varr": null, "isGroup": false}]}, {"title": "Market Share & Product Usage", "metrics": [{"label": "Contracted Reports", "note": null, "values": [31682000.0, 32507000.0, 32777000.0, 36161950.0, 38604880.0, 38604880.0, 48704699.0, 49456590.0], "plan": null, "varr": null, "isGroup": false}, {"label": "$ Price / Report", "note": null, "values": [0.2947477432, 0.2872672963, 0.2892027336, 0.2937085251, 0.3012705389, 0.3012705389, 0.3149526291, 0.3138767351], "plan": null, "varr": null, "isGroup": false}, {"label": "% of Market", "note": null, "values": [0.07822716049, 0.08026419753, 0.0809308642, 0.08928876543, 0.09532069136, 0.09532069136, 0.120258516, 0.122115037], "plan": null, "varr": null, "isGroup": false}, {"label": "Live Reports", "note": null, "values": [null, null, null, null, null, null, null, null], "plan": null, "varr": null, "isGroup": false}, {"label": "% of Market", "note": null, "values": [null, null, null, null, null, null, null, null], "plan": null, "varr": null, "isGroup": false}, {"label": "Reports Generated", "note": null, "values": [null, null, null, null, null, null, null, null], "plan": null, "varr": null, "isGroup": false}, {"label": "% of Live Reports", "note": null, "values": [null, null, null, null, null, null, null, null], "plan": null, "varr": null, "isGroup": false}]}, {"title": "Net CARR", "metrics": [{"label": "Gross CARR", "isGroup": true, "values": [], "plan": null, "varr": null, "note": null}, {"label": "Impressions", "note": null, "values": [791408.0, 157220.0, 153390.0, 367210.0, 203270.0, 97540.0, 682838.0, 90114.0], "plan": 4776187.0, "varr": -3024605, "isGroup": false}, {"label": "Reporting", "note": null, "values": [1626223.0, 0.0, 141000.0, 1141875.0, 1009440.0, 0.0, 3999160.0, 183601.0], "plan": 5246256.0, "varr": 1228820, "isGroup": false}, {"label": "Other", "note": null, "values": [125570.0, 0.0, 0.0, 175000.0, 0.0, 0.0, 0.0, 0.0], "plan": 1167056.0, "varr": -992056, "isGroup": false}, {"label": "Total Gross CARR", "note": null, "values": [2543201, 157220, 294390, 1684085, 1212710, 97540, 4681998, 273715], "plan": 11189499, "varr": -2787841, "isGroup": false}, {"label": "Churn", "note": null, "values": [-109480.0, 0.0, -295400.0, -1630343.0, -176220.0, -32000.0, -331600.0, 0.0], "plan": -378935.0, "varr": -2086628, "isGroup": false}, {"label": "Total Net CARR", "note": null, "values": [2433721, 157220, -1010, 53742, 1036490, 65540, 4350398, 273715], "plan": 10810564, "varr": -4874469, "isGroup": false}]}, {"title": "ARR & Go-Lives", "metrics": [{"label": "Impressions", "note": null, "values": [20777795.0, 21319933.0, 21427873.0, 20498940.0, 20899950.0, 20965490.0, 21463340.0, 21654604.0], "plan": 27163358.0, "varr": -5508754, "isGroup": false}, {"label": "Reporting", "note": null, "values": [1361103.0, 1448103.0, 1572803.0, 2059803.0, 2935103.0, 2935103.0, 3433003.0, 4021503.0], "plan": 5263329.0, "varr": -1241826, "isGroup": false}, {"label": "Other", "note": null, "values": [2349689.0, 2349689.0, 2349689.0, 2349689.0, 2719689.0, 2719689.0, 2719689.0, 2719689.0], "plan": 3337112.0, "varr": -617423, "isGroup": false}, {"label": "Total ARR", "note": null, "values": [24488587, 25117725, 25350365, 24908432, 26554742, 26620282, 27616032, 28395796], "plan": 35763799, "varr": -7368003, "isGroup": false}, {"label": "YTD Growth (%)", "note": null, "values": [0, 0.02569106988, 0.03519100551, 0.01714451716, 0.08437216079, 0.08704850958, 0.1277103085, 0.1595522437], "plan": null, "varr": null, "isGroup": false}, {"label": "% ARR to CARR", "note": null, "values": [0.6783102237, 0.6927200525, 0.6991554902, 0.6859504025, 0.7109935014, 0.7114997644, 0.6612286959, 0.6754722434], "plan": null, "varr": null, "isGroup": false}, {"label": "Reporting Go-Lives", "note": null, "values": [null, 87000.0, 124700.0, 487000.0, 875300.0, 0.0, 497900.0, 165000.0], "plan": 3479600.0, "varr": -1242700, "isGroup": false}, {"label": "% of Reporting CARR Active", "note": null, "values": [0.1457564939, 0.1550730666, 0.1659215263, 0.1939354903, 0.2523622991, 0.2523622991, 0.2237989689, 0.2590628278], "plan": null, "varr": null, "isGroup": false}]}, {"title": "Burn & Cash Position", "metrics": [{"label": "Change in Cash", "note": null, "values": [-1634288.96, -4165881, -4331004.08, -3592199.38, -546203.01, -2335414.02, -1249051.73, -1835558.91], "plan": -19344647.0, "varr": 1289334.87, "isGroup": false}, {"label": "Cash Balance", "note": null, "values": [68013088.13, 63847207.13, 59516203.05, 55924003.67, 55377800.66, 53042386.64, 51793334.91, 49957776.0], "plan": 48679143.0, "varr": 1278633, "isGroup": false}, {"label": "Runway (T3 Month)", "note": null, "values": [null, null, null, null, null, null, null, 18.0], "plan": 25.0, "varr": -7, "isGroup": false}]}]};
 
-  // Executive summary — edit these blocks each reporting cycle.
-  const EXEC_SUMMARY = [
-    {
-      tag: "Growth",
-      text: "June and July delivered the largest net-new CARR of the year, driven almost entirely by " +
-        "Reporting. The same motion is converting to revenue faster \u2014 Reporting ARR has roughly " +
-        "tripled since December.",
-    },
-    {
-      tag: "vs Plan",
-      text: "Headline CARR and ARR remain behind plan, but the gap is concentrated in Impressions. " +
-        "The Reporting growth engine is running at or ahead of plan.",
-    },
-    {
-      tag: "Cash & Q3",
-      text: "Burn and cash balance are both favorable to plan, though heavier recent spend has " +
-        "tightened runway. Q3 closed CARR is early against an ambitious target \u2014 new Reporting " +
-        "closes are the swing factor for the quarter.",
-    },
-  ];
+  // Executive summary — edit each month. Keep to 2\u20133 short sentences about the latest month.
+  const EXEC_SUMMARY =
+    "July was quiet on new CARR after June\u2019s record month \u2014 small net adds and zero churn. " +
+    "Activation carried the month: ARR rose ~3% as signed Reporting deals went live. " +
+    "Burn stayed moderate and cash is above plan, but Q3 bookings are off to a slow start.";
 
   // ---------------------------------------------------------------- helpers
 
@@ -637,33 +622,27 @@
     const sum = $("#execSummary");
     if (sum) {
       sum.innerHTML = "";
-      const head = document.createElement("div");
-      head.className = "exec-head";
-      const h = document.createElement("h2");
-      h.className = "panel-title";
-      h.innerHTML = '<span class="spine-idx-inline">00</span>Executive Summary';
-      const when = document.createElement("span");
-      when.className = "exec-when";
-      when.textContent = model.months.length ? "through " + fmtMonth(model.months[model.months.length - 1]) : "";
-      head.append(h, when);
-      const body = document.createElement("div");
-      body.className = "exec-body";
-      EXEC_SUMMARY.forEach((item) => {
-        const block = document.createElement("div");
-        block.className = "exec-block";
-        const tag = document.createElement("div");
-        tag.className = "exec-tag";
-        tag.textContent = item.tag;
-        const p = document.createElement("p");
-        p.textContent = item.text;
-        block.append(tag, p);
-        body.appendChild(block);
-      });
-      sum.append(head, body);
+      const tag = document.createElement("div");
+      tag.className = "exec-tag";
+      tag.textContent = "Executive Summary \u00b7 " +
+        (model.months.length ? fmtMonth(model.months[model.months.length - 1]) : "");
+      const p = document.createElement("p");
+      p.textContent = EXEC_SUMMARY;
+      sum.append(tag, p);
     }
     renderKpis(model);
     renderSections(model);
+    syncPinnedHeight();
     if (typeof window !== "undefined") window.__snapshot = { model };
+  }
+
+  function syncPinnedHeight() {
+    const pinned = $("#pinned");
+    if (!pinned || typeof pinned.offsetHeight !== "number" || !pinned.offsetHeight) return;
+    document.documentElement.style.setProperty("--pinned-h", pinned.offsetHeight + "px");
+  }
+  if (typeof window !== "undefined" && window.addEventListener) {
+    window.addEventListener("resize", syncPinnedHeight);
   }
 
   render();
