@@ -160,12 +160,27 @@ button, input, label { font-family: inherit; }
   color: var(--accent-bright);
   margin-bottom: 6px;
 }
-.exec-summary p {
+.exec-list {
   margin: 0;
-  font-size: 16px;
-  line-height: 1.55;
+  padding: 0;
+  list-style: none;
+}
+.exec-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 15.5px;
+  line-height: 1.6;
   color: var(--ink);
-  max-width: 100ch;
+  max-width: 110ch;
+}
+.exec-list li + li { margin-top: 3px; }
+.exec-list li::before {
+  content: "\25AA";
+  position: absolute;
+  left: 2px;
+  color: var(--accent-bright);
+  font-size: 11px;
+  top: 4px;
 }
 
 /* ---------- KPI strip ---------- */
