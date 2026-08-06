@@ -10,7 +10,7 @@
 
   // Executive summary — edit each month. Keep to 2\u20133 short sentences about the latest month.
   const EXEC_SUMMARY = [
-    "July was quiet on new CARR after June\u2019s record month \u2014 $276k gross CARR and no churn.",
+    "July was quiet on new CARR after June\u2019s record month \u2014 $274k gross CARR and no churn.",
     "Total ARR increased 3% MoM to $28.4M (\u2212$7.4M vs plan YTD), with $165k of Reporting go-lives in July and $2.24M YTD.",
     "Burn stayed moderate and cash remains above plan \u2014 $50M cash balance and 18 months of runway.",
   ];
