@@ -11,8 +11,8 @@
   // Executive summary — edit each month. Keep to 2\u20133 short sentences about the latest month.
   const EXEC_SUMMARY =
     "July was quiet on new CARR after June\u2019s record month \u2014 small net adds and zero churn. " +
-    "Activation carried the month: ARR rose ~3% as signed Reporting deals went live. " +
-    "Burn stayed moderate and cash is above plan, but Q3 bookings are off to a slow start.";
+    "Activation continued: ARR rose ~3% as signed Reporting deals went live, including $165k of Reporting go-lives in the month. " +
+    "Burn stayed moderate and cash remains above plan; Q3 closed CARR stands at $276k, about 6% of the $4.7M plan.";
 
   // ---------------------------------------------------------------- helpers
 
@@ -314,7 +314,7 @@
 
   const SERIES_COLORS = ["#a78bfa", "#60a5fa", "#e8b45a"];
   const C_UP = "#3ddc97", C_DOWN = "#ff7b6b", C_PLAN = "#9aa3c0";
-  const MONO = { family: "'IBM Plex Mono', monospace", size: 10.5 };
+  const MONO = { family: "'IBM Plex Mono', monospace", size: 12 };
   const TICK_COLOR = "#a79fc4", GRID_COLOR = "#2a2344";
 
   const fmtByKind = (v, k) =>
@@ -339,7 +339,7 @@
           borderColor: "#3d3563",
           borderWidth: 1,
           titleFont: { family: "'Archivo', sans-serif" },
-          bodyFont: { family: "'IBM Plex Mono', monospace", size: 11.5 },
+          bodyFont: { family: "'IBM Plex Mono', monospace", size: 12.5 },
           callbacks: { label: (ctx) => " " + ctx.dataset.label + ": " + fmtByKind(ctx.parsed.y, ctx.dataset._kind) },
         },
       },
