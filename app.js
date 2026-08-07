@@ -146,6 +146,7 @@
         prevHidden = hide;
         if (hide) continue;
         if (m.kind === "count" && /carr|arr|cash|burn/i.test(s.title)) m.kind = "money";
+        if (/runway/i.test(m.label)) { m.plan = null; m.varr = null; }
         m.flow = !m.isGroup && (FLOW_LABEL.test(m.label) || (flowSection && m.kind === "money"));
         kept.push(m);
       }
@@ -387,18 +388,9 @@
       return;
     }
 
-    const cashFlow = find(/change in cash/i);
-    if (cashFlow) {
-      dualFlowChart(
-        canvas, labels,
-        "Change in cash (monthly)", cashFlow.values,
-        "Change in cash (YTD)", cumulativeFiscal(cashFlow.values, model.months),
-        isNum(cashFlow.plan) ? cashFlow.plan : null, "YTD plan"
-      );
-      return;
-    }
-
-    const series = chartSeries(section);
+    // Burn section: show the cash balance trajectory; monthly change stays in the table.
+    const cashBal = find(/cash balance/i);
+    const series = cashBal ? [cashBal] : chartSeries(section);
     if (!series.length) { canvas.parentElement.remove(); return; }
     const kind = series[0].kind;
     const isMoney = kind === "money" || kind === "money2";
