@@ -115,7 +115,7 @@
 
   const SECTION_RENAMES = {
     "carr": "Total CARR",
-    "market share & product usage": "Reporting Market Share and Product Usage",
+    "market share & product usage": "Reporting Market Share",
   };
   const HIDDEN_METRICS = ["live reports", "% of live reports", "check"];
   const FLOW_LABEL = /churn|change in cash|go-lives/i;
