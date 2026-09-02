@@ -10,7 +10,7 @@
 
   // Executive summary — edit each month. Keep to 2\u20133 short sentences about the latest month.
   const EXEC_SUMMARY = [
-    "August was the second-best CARR month of the year \u2014 ~$1.0M gross CARR with minimal churn, lifting Q3 closed CARR to $1.28M, 27% of the $4.7M plan.",
+    "August rebounded on new CARR \u2014 ~$1.0M gross with minimal churn, the strongest month since June \u2014 lifting Q3 closed CARR to $1.28M, 27% of the $4.7M plan.",
     "Total ARR increased 2.7% MoM to $29.0M (\u2212$7.7M vs plan YTD), with $752k of Reporting go-lives in August and $3.25M YTD.",
     "Burn stayed moderate and cash remains above plan \u2014 $47.6M cash balance and 17 months of runway.",
   ];
