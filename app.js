@@ -10,8 +10,14 @@
 
   // Executive summary — edit each month. Keep to 2\u20133 short sentences about the latest month.
   const EXEC_SUMMARY = [
-    "August rebounded on new CARR \u2014 ~$1.0M gross with minimal churn, lifting Q3 closed CARR to $1.28M, 27% of the $4.7M plan.",
-    "Total ARR increased 2.7% MoM to $29.0M (\u2212$7.7M vs plan YTD), with $752k of Reporting go-lives in August and $3.25M YTD.",
+    "August saw a slight rebound on new CARR from a slow July \u2014 ~$1.0M gross CARR with minimal churn, lifting Q3 new CARR to $1.3M.",
+    "Total CARR is $43M (19% YTD growth) \u2014 we are $5.3M below plan, but this is due to Impressions \u2014 Reporting CARR is $15.6M (68% YTD growth, and $0.6M above plan).",
+    {
+      text: "Total ARR increased 3% MoM to $29.0M (\u2212$7.7M vs plan YTD), with $752k of Reporting go-lives in August and $3.3M YTD.",
+      sub: [
+        "Reporting ARR still remains below plan, but our % of Reporting CARR that has gone live has nearly doubled, and is now 29% (vs. 15% in Dec-25).",
+      ],
+    },
     "Burn stayed moderate and cash remains above plan \u2014 $47.6M cash balance and 17 months of runway.",
   ];
 
@@ -117,7 +123,7 @@
     "carr": "Total CARR",
     "market share & product usage": "Reporting Market Share",
   };
-  const HIDDEN_METRICS = ["live reports", "% of live reports", "check"];
+  const HIDDEN_METRICS = ["live reports", "% of live reports", "reports generated", "check"];
   const FLOW_LABEL = /churn|change in cash|go-lives/i;
   const FLOW_SECTION = /net carr/i;
 
@@ -646,10 +652,17 @@
         (model.months.length ? fmtMonth(model.months[model.months.length - 1]) : "");
       const ul = document.createElement("ul");
       ul.className = "exec-list";
-      EXEC_SUMMARY.forEach((line) => {
+      EXEC_SUMMARY.forEach((item) => {
+        const line = typeof item === "string" ? item : item.text;
         const li = document.createElement("li");
         li.textContent = line;
         ul.appendChild(li);
+        (typeof item === "object" && item.sub ? item.sub : []).forEach((subLine) => {
+          const sli = document.createElement("li");
+          sli.className = "exec-sub";
+          sli.textContent = subLine;
+          ul.appendChild(sli);
+        });
       });
       sum.append(tag, ul);
     }

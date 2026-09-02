@@ -167,6 +167,15 @@ button, input, label { font-family: inherit; }
   max-width: 110ch;
 }
 .exec-list li + li { margin-top: 3px; }
+.exec-list li.exec-sub {
+  padding-left: 40px;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+.exec-list li.exec-sub::before {
+  content: "\25AB";
+  left: 24px;
+}
 .exec-list li::before {
   content: "\25AA";
   position: absolute;
