@@ -10,11 +10,22 @@
 
   // Executive summary — edit each month. Keep to 2\u20133 short sentences about the latest month.
   const EXEC_SUMMARY = [
-    "August saw a slight rebound on new CARR from a slow July \u2014 ~$1.0M gross CARR with minimal churn, lifting Q3 new CARR to $1.3M.",
-    "Total CARR is $43M (19% YTD growth) \u2014 we are $5.3M below plan, but this is due to Impressions \u2014 Reporting CARR is $15.6M (68% YTD growth, and $0.6M above plan).",
     {
-      text: "Total ARR increased 3% MoM to $29.0M (\u2212$7.7M vs plan YTD), with $752k of Reporting go-lives in August and $3.3M YTD.",
+      text: "August saw a slight rebound on New CARR from a slow July \u2014 ~$1.0M Gross CARR with minimal churn, lifting Q3 New CARR to $1.3M.",
       sub: [
+        "$700K of the $1.0M Gross CARR in August was from the UPMC Impressions sale.",
+      ],
+    },
+    {
+      text: "Total CARR is $43M (19% YTD growth) \u2014 we are $5.3M below plan, due to Impressions.",
+      sub: [
+        "Reporting CARR is $15.6M (68% YTD growth, and $0.6M above plan).",
+      ],
+    },
+    {
+      text: "Total ARR is $29M (18% YTD Growth) \u2014 we are $7.7M below plan, with Impressions making up 80% of the gap.",
+      sub: [
+        "$752K of Reporting go-lives in August \u2014 2nd highest Reporting Go-Live month YTD \u2014 and $3.3M go-lives YTD.",
         "Reporting ARR still remains below plan, but our % of Reporting CARR that has gone live has nearly doubled, and is now 29% (vs. 15% in Dec-25).",
       ],
     },
