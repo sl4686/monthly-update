@@ -255,26 +255,51 @@
         if (!model.closed || !model.closed.items.length) return;
         const items = model.closed.items;
         const byName = (re) => items.find((it) => re.test(it.name || ""));
-        const actual = byName(/jul|actual|qtd|month/i) || items[0];
+        const monthItem = byName(/jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|actual|month/i) || items[0];
         const plan = byName(/plan/i);
-        const pct = byName(/%/) || (plan && isNum(plan.value) && plan.value !== 0
-          ? { value: actual.value / plan.value } : null);
+
+        // QTD closed CARR: closed == gross CARR added, so sum Total Gross CARR
+        // over the months of the current quarter. Falls back to the sheet's
+        // single-month figure if the gross series isn't available.
+        let qtd = null;
+        const gross = findMetric(model, "Total Gross CARR");
+        if (gross) {
+          const last = model.months[model.months.length - 1];
+          const q = Math.floor(last.getMonth() / 3), y = last.getFullYear();
+          let run = null;
+          model.months.forEach((mo, i) => {
+            if (mo.getFullYear() === y && Math.floor(mo.getMonth() / 3) === q && isNum(gross.values[i])) {
+              run = (run ?? 0) + gross.values[i];
+            }
+          });
+          qtd = run;
+        }
+        const shown = isNum(qtd) ? qtd : monthItem.value;
+        const pctVal = plan && isNum(plan.value) && plan.value !== 0 ? shown / plan.value : null;
+
         const chips = [];
         if (plan) chips.push(chipEl("chip-plan", (plan.name || "Plan") + " " + fmtMoney(plan.value)));
-        if (pct) chips.push(chipEl("chip-plan", (Math.abs(pct.value) <= 1.5 ? pct.value * 100 : pct.value).toFixed(1) + "% of plan"));
+        if (pctVal != null) chips.push(chipEl("chip-plan", (pctVal * 100).toFixed(1) + "% of plan"));
         const card = kpiCard(
           model.closed.label + " (Q3)",
-          fmtMoney(actual.value),
-          (actual.name ? actual.name + " \u00b7 " : "") + (plan && plan.name ? "vs " + plan.name : "in quarter"),
+          fmtMoney(shown),
+          "QTD" + (model.months.length ? " through " + fmtMonth(model.months[model.months.length - 1]) : ""),
           chips
         );
-        if (pct) {
+        // month figure from the sheet as a secondary note in the box
+        if (isNum(qtd) && monthItem && isNum(monthItem.value)) {
+          const note = document.createElement("div");
+          note.className = "kpi-asof";
+          note.textContent = (monthItem.name || "This month") + ": " + fmtMoney(monthItem.value);
+          const meta = card.children[card.children.length - 1];
+          card.insertBefore(note, meta);
+        }
+        if (pctVal != null) {
           const bar = document.createElement("div");
           bar.className = "kpi-progress";
           const fill = document.createElement("div");
           fill.className = "kpi-progress-fill";
-          const w = Math.max(0, Math.min(100, (Math.abs(pct.value) <= 1.5 ? pct.value * 100 : pct.value)));
-          fill.style.width = w + "%";
+          fill.style.width = Math.max(0, Math.min(100, pctVal * 100)) + "%";
           bar.appendChild(fill);
           card.insertBefore(bar, card.children[2]);
         }
