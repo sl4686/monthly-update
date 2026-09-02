@@ -289,8 +289,8 @@
         // month figure from the sheet as a secondary note in the box
         if (isNum(qtd) && monthItem && isNum(monthItem.value)) {
           const note = document.createElement("div");
-          note.className = "kpi-asof";
-          note.textContent = (monthItem.name || "This month") + ": " + fmtMoney(monthItem.value);
+          note.className = "kpi-note";
+          note.textContent = (monthItem.name || "This month") + " " + fmtMoney(monthItem.value);
           const meta = card.children[card.children.length - 1];
           card.insertBefore(note, meta);
         }
