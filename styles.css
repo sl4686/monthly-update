@@ -346,6 +346,14 @@ button, input, label { font-family: inherit; }
 
 .panel-chart { padding: 16px 22px 6px; height: 250px; }
 .panel-chart canvas { max-height: 226px; }
+.panel-chart .chart-unavailable {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
 
 /* ---------- ledger table (secondary detail — kept small) ---------- */
 .table-wrap { overflow-x: auto; padding: 10px 12px 18px; }
