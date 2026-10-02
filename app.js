@@ -11,7 +11,7 @@
   // Executive summary — edit each month. Keep to 2\u20133 short sentences about the latest month.
   const EXEC_SUMMARY = [
     {
-      text: "September closed $1.8M Gross CARR and $135K churn. Total Q3 was $3.1M Gross CARR (67% of plan) and $153K churn.",
+      text: "September saw New CARR pick up \u2014 $1.8M Gross CARR (highest month since June) with $135K churn, netting $1.7M and lifting Q3 New CARR to $3.1M Gross / $3.0M Net (67% of plan).",
       sub: [
         "97% of September’s Gross CARR was Reporting: $1.2M of cross-sells (TRA $447K, Iowa Radiology $315K, Eastern Radiologists $260K) and $0.6M of new logos (Millennium $236K, Cape Cod $140K).",
         "Churn was mostly Summit Radiology Services (−$112K Impressions).",
